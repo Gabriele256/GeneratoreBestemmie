@@ -1,0 +1,351 @@
+/* Stili generali che si applicano a tutte le risoluzioni */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+/* Media query per applicare gli stili solo su desktop */
+@media screen and (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div#sidebar {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 100%;
+        width: 20%;
+        background-color: rgb(247, 243, 243);
+    }
+
+    div#sidebar div#title {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: rgb(247, 243, 243);
+        margin-top: 0;
+        padding-top: 10px;
+    }
+
+    div#sidebar h1 {
+        font-size: 20pt;
+        margin: 0;
+    }
+
+    div#content {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div#content div#center {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+
+    div#content div#center #principal {
+        font-size: 20pt;
+        font-weight: bold;
+    }
+
+    div#content div#center button {
+        border-radius: 20px;
+        border: 0;
+        color: white;
+        background-color: darkorange;
+        font-size: 12pt;
+        height: 4vh;
+        width: 10vw;
+    }
+
+    div#content div#center button:hover {
+        background-color: rgb(255, 150, 0);
+        cursor: pointer;
+    }
+
+    div#content div#center button:active {
+        background-color: rgb(255, 160, 0);
+    }
+
+    #title {
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: self-start;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    #icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        padding-left: 40px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #historyList li {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div#sidebar {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 100%;
+        width: 35%;
+        background-color: rgb(247, 243, 243);
+    }
+
+    div#sidebar div#title {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: rgb(247, 243, 243);
+        margin-top: 0;
+        padding-top: 10px;
+    }
+
+    div#sidebar h1 {
+        font-size: 16pt;
+        margin: 0;
+    }
+
+    div#content {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div#content div#center {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+
+    div#content div#center #principal {
+        font-size: 20pt;
+        font-weight: bold;
+    }
+
+    div#content div#center button {
+        border-radius: 20px;
+        border: 0;
+        color: white;
+        background-color: darkorange;
+        font-size: 12pt;
+        height: 4vh;
+        width: 10vw;
+    }
+
+    div#content div#center button:hover {
+        background-color: rgb(255, 150, 0);
+        cursor: pointer;
+    }
+
+    div#content div#center button:active {
+        background-color: rgb(255, 160, 0);
+    }
+
+    #title {
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: self-start;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    #icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        padding-left: 40px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #historyList li {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div#sidebar {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 100%;
+        width: 10%;
+        background-color: rgb(247, 243, 243);
+        transition: ease-out 0.5s;
+    }
+
+    div#sidebar div#title {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: rgb(247, 243, 243);
+        margin-top: 0;
+        padding-top: 10px;
+    }
+    
+    div#sidebar h1 {
+        font-size: 15pt;
+        margin: 0;        
+    }
+    
+    .visible {
+        opacity: 1; /* Mostra l'elemento */
+        visibility: visible; /* Permette l'interazione */
+        transition: opacity 0.5s ease; /* Applica la dissolvenza alla visibilità */
+    }
+    
+    .hidden {
+        opacity: 0; /* Nasconde inizialmente */
+        visibility: hidden; /* Impedisce l'interazione con gli altri elementi */
+        transition: opacity 0.5s ease, visibility 0s 0.5s; /* Dissolvenza e ritardo per visibility */
+        display: none;
+    }
+
+    div#content {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div#content div#center {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+
+        padding: 20px;
+    }
+
+    div#content div#center #principal {
+        font-size: 15pt;
+        font-weight: bold;
+    }
+
+    div#content div#center #generated {
+        font-size: 8pt;
+    }
+
+    div#content div#center button {
+        border-radius: 20px;
+        border: 0;
+        color: white;
+        background-color: darkorange;
+        font-size: 8pt;
+        height: 4vh;
+        width: 20vw;
+    }
+
+    div#content div#center button:hover {
+        background-color: rgb(255, 150, 0);
+        cursor: pointer;
+    }
+
+    div#content div#center button:active {
+        background-color: rgb(255, 160, 0);
+    }
+
+    #title {
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: self-start;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    #icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    #icon-ai{
+        height: 40px;
+        width: 40px;
+    }
+
+    ul {
+        display: none;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        padding-left: 40px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #historyList li {
+        margin-bottom: 5px;
+    }
+}
